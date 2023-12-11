@@ -1,65 +1,293 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Federico Saboredo</title>
-</head>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- Encabezado con Menú de Navegación -->
-    <header>
-        <h1>Federico</h1>
-        <!-- Menú de Navegación -->
-        <div class="menu-icon">&#9776;</div>
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#sobre-mi">Sobre mí</a>
-            <a href="#conocimientos">Conocimientos</a>
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contactame">Contáctame</a>
-        </nav>
+    <header class="site-header">
+      <h1><a href="#inicio">Federico</a></h1>
+      <!-- Menú de Navegación -->
+      <div class="menu-icon">&#9776;</div>
+      <nav class="main-nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#conocimientos">Conocimientos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contactame">Contáctame</a>
+      </nav>
     </header>
 
-    <!-- Sección Inicio -->
-    <section id="inicio">
-        <h2>Federico Saboredo</h2>
-        <p>Full Stack Developer</p>
-        <!-- Enlace para desplazarse a la sección "Sobre mí" -->
-        <a href="#sobre-mi" class="scroll-link">↓</a>
-    </section>
+    <div class="cont-page">
+      <!-- Sección Inicio -->
+      <section id="inicio" class="home-section">
+        <h2 class="section-title">Federico Saboredo</h2>
+        <p class="section-subtitle">Full Stack Developer</p>
 
-    <!-- Sección Sobre mí -->
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
+        <!-- Social Media Icons -->
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/federico-saboredo-a55131248/"
+            target="_blank"
+            title="LinkedIn"
+            class="icon-link linkedin"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://github.com/Xenock20"
+            target="_blank"
+            title="GitHub"
+            class="icon-link github"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="mailto:federicosaboredo04@gmail.com"
+            title="Email"
+            class="icon-link email"
+            ><i class="fas fa-envelope"></i
+          ></a>
+        </div>
+
+        <a href="#sobre-mi" class="scroll-link"
+          ><i class="fas fa-arrow-down"></i
+        ></a>
+      </section>
+
+      <!-- Sección Sobre mí -->
+      <section id="sobre-mi" class="about-section">
+        <h2 class="section-title">Sobre mí</h2>
+        <div class="cont-info-about">
+          <div class="section-img">
+            <img
+              src="./assets/img/profile.jpg"
+              alt="perfil-img"
+              class="profile-image"
+              width="300"
+            />
+          </div>
+          <div class="section-text">
+            <span class="about-text"
+              >¡Hola! Soy Federico Saboredo, un Técnico Informático y
+              Programador apasionado con sede en Argentina. Desde temprana edad,
+              me sumergí en la informática y he cultivado habilidades en
+              desarrollo web, destacando en HTML, CSS, JavaScript, Java y SQL.
+              Siempre busco aprender y mantenerme actualizado. Mi objetivo es
+              desafiarme, contribuir en proyectos significativos y seguir
+              creciendo en la tecnología. ¡Emocionado por las oportunidades
+              futuras y conectando con otros amantes de la tecnología como
+              tú!</span
+            >
+            <a
+              href="https://drive.google.com/file/d/1BuEVSNkoOzJbbNtHErBaN2UtVu_ixy9h/view?usp=sharing"
+              target="_blank"
+              class="cv-link"
+              >CV</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección Conocimientos -->
+      <section id="conocimientos" class="skills-section">
+        <h2 class="section-title">Tecnologías / Herramientas</h2>
+
+        <div class="skill-category">
+          <h3>Lenguajes</h3>
+          <ul class="skill-list">
+            <li>JAVASCRIPT</li>
+            <li>JAVA</li>
+            <li>PHP</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Frameworks y Extras</h3>
+          <ul class="skill-list">
+            <li>REACT</li>
+            <li>SPRING BOOT</li>
+            <li>ANGULAR</li>
+            <li>EXPRESS.JS</li>
+            <li>NODEJS</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Softwares y herramientas</h3>
+          <ul class="skill-list">
+            <li>BASH</li>
+            <li>VS CODE</li>
+            <li>GIT</li>
+            <li>POSTMAN</li>
+          </ul>
+        </div>
+
         <!-- Puedes agregar más contenido aquí -->
-    </section>
+      </section>
 
-    <!-- Sección Conocimientos -->
-    <section id="conocimientos">
-        <h2>Conocimientos</h2>
+      <!-- Sección Proyectos -->
+      <section id="proyectos" class="projects-section">
+        <h2 class="section-title">Proyectos</h2>
+
+        <div class="project-container">
+          <div class="project">
+            <img
+              src="./assets/img/notfound.jpg"
+              alt="imagen-proyecto"
+              class="project-image"
+            />
+            <h3 class="project-title">Titulo del proyecto 1</h3>
+            <p class="project-description">Descripción del proyecto 1</p>
+            <a
+              href="link-to-demo-or-github-1"
+              target="_blank"
+              class="project-link"
+              >Demo o GitHub</a
+            >
+          </div>
+
+          <div class="project">
+            <img
+              src="./assets/img/notfound.jpg"
+              alt="imagen-proyecto"
+              class="project-image"
+            />
+            <h3 class="project-title">Titulo del proyecto 2</h3>
+            <p class="project-description">Descripción del proyecto 2</p>
+            <a
+              href="link-to-demo-or-github-2"
+              target="_blank"
+              class="project-link"
+              >Demo o GitHub</a
+            >
+          </div>
+
+          <div class="project">
+            <img
+              src="./assets/img/notfound.jpg"
+              alt="imagen-proyecto"
+              class="project-image"
+            />
+            <h3 class="project-title">Titulo del proyecto 3</h3>
+            <p class="project-description">Descripción del proyecto 3</p>
+            <a
+              href="link-to-demo-or-github-3"
+              target="_blank"
+              class="project-link"
+              >Demo o GitHub</a
+            >
+          </div>
+          <div class="project">
+            <img
+              src="./assets/img/notfound.jpg"
+              alt="imagen-proyecto"
+              class="project-image"
+            />
+            <h3 class="project-title">Titulo del proyecto 1</h3>
+            <p class="project-description">Descripción del proyecto 1</p>
+            <a
+              href="link-to-demo-or-github-1"
+              target="_blank"
+              class="project-link"
+              >Demo o GitHub</a
+            >
+          </div>
+
+          <div class="project">
+            <img
+              src="./assets/img/notfound.jpg"
+              alt="imagen-proyecto"
+              class="project-image"
+            />
+            <h3 class="project-title">Titulo del proyecto 2</h3>
+            <p class="project-description">Descripción del proyecto 2</p>
+            <a
+              href="link-to-demo-or-github-2"
+              target="_blank"
+              class="project-link"
+              >Demo o GitHub</a
+            >
+          </div>
+
+          <div class="project">
+            <img
+              src="./assets/img/notfound.jpg"
+              alt="imagen-proyecto"
+              class="project-image"
+            />
+            <h3 class="project-title">Titulo del proyecto 3</h3>
+            <p class="project-description">Descripción del proyecto 3</p>
+            <a
+              href="link-to-demo-or-github-3"
+              target="_blank"
+              class="project-link"
+              >Demo o GitHub</a
+            >
+          </div>
+        </div>
+
         <!-- Puedes agregar más contenido aquí -->
-    </section>
+      </section>
 
-    <!-- Sección Proyectos -->
-    <section id="proyectos">
-        <h2>Proyectos</h2>
-        <!-- Puedes agregar más contenido aquí -->
-    </section>
+      <!-- Sección Contáctame -->
+      <section id="contactame" class="contact-section">
+        <h2 class="section-title">Contáctame</h2>
 
-    <!-- Sección Contáctame -->
-    <section id="contactame">
-        <h2>Contáctame</h2>
-        <!-- Puedes agregar un formulario de contacto u otra información de contacto aquí -->
-    </section>
+        <!-- Formulario de contacto -->
+        <form action="process_contact.php" method="post" class="contact-form">
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Tu Nombre"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="Tu Correo Electrónico"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              placeholder="Tu Mensaje"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Enviar Mensaje</button>
+        </form>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; 2023 Federico Saboredo. Todos los derechos reservados.</p>
+      </footer>
+    </div>
 
     <!-- Pie de Página -->
-    <footer>
-        <p>&copy; 2023 Tu Nombre. Todos los derechos reservados.</p>
-    </footer>
-
-</body>
-
+  </body>
+  <script src="assets/js/main.js"></script>
+  <script
+    src="https://kit.fontawesome.com/5ebed57939.js"
+    crossorigin="anonymous"
+  ></script>
 </html>

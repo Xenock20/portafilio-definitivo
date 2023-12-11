@@ -1,0 +1,447 @@
+* {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  overflow: none;
+  font-size: 16px;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+/*NAVBAR*/
+
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1000;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  backdrop-filter: blur(
+    25px
+  ); /* Ajusta el valor del desenfoque según tus preferencias */
+  z-index: -1; /* Coloca el fondo detrás del contenido principal */
+}
+
+.site-header h1 {
+  margin: 0;
+}
+
+.main-nav {
+  display: none;
+  text-align: center;
+  position: absolute;
+  top: 60px; /* Igualar a la altura de la barra de navegación */
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  backdrop-filter: blur(25px);
+}
+
+.main-nav a {
+  display: block;
+  padding: 15px 0px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+}
+
+.menu-open .main-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-open .main-nav a {
+  background-color: #181818d2;
+}
+
+/*BODY PAGE*/
+
+.home-section,
+.about-section,
+.skills-section,
+.projects-section,
+.contact-section {
+  margin: 50px 0px;
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home-section,
+.about-section,
+.skills-section,
+.contact-section {
+  height: 100vh;
+}
+
+.cont-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Seccion Inicio*/
+
+.section-title {
+  height: 15%;
+  font-size: 2.8rem;
+}
+
+.section-subtitle {
+  height: 15%;
+  font-size: 2rem;
+}
+
+.social-icons {
+  height: 25%;
+  font-size: 1.8rem;
+}
+
+.icon-link {
+    margin: 15px;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .icon-link i {
+    font-size: 2rem; /* Ajusta el tamaño de los íconos según sea necesario */
+    color: white; /* Color del ícono por defecto */
+    transition: color 0.3s ease, transform 0.3s ease; /* Añade transición al color y tamaño */
+  }
+  
+  .icon-link.linkedin:hover i {
+    color: #0077b5; /* Cambia el color del ícono de LinkedIn al hacer hover */
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+  }
+  
+  .icon-link.github:hover i {
+    color: #e000ec; /* Cambia el color del ícono de GitHub al hacer hover */
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+  }
+  
+  .icon-link.email:hover i {
+    color: #ea4335; /* Cambia el color del ícono de Email al hacer hover */
+    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+  }
+  
+
+.scroll-link {
+  font-size: 2rem;
+  height: 35px;
+  width: 35px;
+  border: 2px solid white;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-link i {
+  color: white; /* Color del ícono por defecto */
+  transition: color 0.3s ease;
+}
+
+.scroll-link:hover {
+  background-color: #fff; /* Cambia el fondo al hacer hover */
+}
+
+.scroll-link:hover i {
+  color: #3498db; /* Cambia el color del ícono al hacer hover */
+}
+
+/*Seccion sobre mi*/
+
+.section-text {
+  padding: 20px 0px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+.cv-link {
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cv-link:hover {
+  background-color: #fff; /* Cambia el fondo al hacer hover */
+  color: #3498db; /* Cambia el color del texto al hacer hover */
+  text-decoration: none; /* Elimina el subrayado al hacer hover */
+}
+
+/*Seccion conocimientos*/
+
+.skill-category {
+  text-align: start;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.skill-category > h3 {
+  margin: 5px 0px;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se desplacen a la siguiente fila si no hay suficiente espacio */
+}
+
+.skill-list li {
+  background-color: #333; /* Ajusta el color de fondo según tus preferencias */
+  color: #fff; /* Ajusta el color del texto según tus preferencias */
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px; /* Ajusta el radio de borde según tus preferencias */
+  transition: all 0.5s;
+}
+
+.skill-list li:hover{
+    transform: scale(1.1);
+}
+
+/* Sección proyectos */
+.projects-section {
+  padding-top: 150px;
+}
+
+.projects-section > .section-title {
+  margin: 10px 0px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px; /* Espaciado entre proyectos */
+}
+
+.project {
+  width: 90%;
+  background-color: #333; /* Fondo del proyecto */
+  border-radius: 8px; /* Borde redondeado */
+  padding: 20px;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 200px; /* Ajusta según tus preferencias */
+  object-fit: cover; /* Ajusta cómo la imagen se ajusta al contenedor */
+  border-radius: 5px; /* Borde redondeado para la imagen */
+}
+
+.project-title {
+  margin-top: 10px;
+}
+
+.project-description {
+  margin-top: 10px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  background-color: #252525;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #fff;
+  color: #3498db
+}
+
+/*Seccion contacto*/
+/* Estilos generales de la sección de contacto */
+.contact-section {
+  padding: 50px 0; /* Espaciado interior de la sección */
+  text-align: center;
+}
+
+/* Estilo del título de la sección */
+.contact-section .section-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Estilos del formulario de contacto */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Estilos del grupo de formulario */
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Estilos para las etiquetas del formulario */
+.form-group label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+/* Estilos para los campos de entrada del formulario */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Estilos para el botón de enviar */
+.submit-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #2980b9;
+}
+
+/*footer*/
+
+/* Estilos generales del pie de página */
+.site-footer {
+  background-color: #333; /* Color de fondo del pie de página */
+  color: #fff; /* Color del texto en el pie de página */
+  text-align: center;
+  padding: 20px; /* Espaciado interior del pie de página */
+}
+
+/* Estilos para el texto de derechos de autor */
+.site-footer p {
+  margin: 0; /* Elimina el margen predeterminado para el párrafo */
+  font-size: 14px;
+}
+
+/* Estilos para pantallas más grandes */
+@media screen and (min-width: 769px) {
+  .menu-icon {
+    display: none;
+  }
+
+  .main-nav {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: static;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+  }
+
+  .main-nav a {
+    margin: 0 15px;
+  }
+
+  .home-section,
+  .about-section,
+  .skills-section,
+  .projects-section,
+  .contact-section,
+  .site-footer {
+    width: 80%;
+  }
+
+  .project-container {
+    width: 100%;
+  }
+}
+
+/* Estilos para pantallas pequeñas (teléfonos) */
+@media only screen and (max-width: 600px) {
+  /* Agrega aquí tus estilos para teléfonos */
+}
+
+/* Estilos para pantallas medianas (tabletas) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* Agrega aquí tus estilos para tabletas */
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media only screen and (min-width: 1025px) {
+  /* Agrega aquí tus estilos para escritorios */
+
+  .cont-info-about {
+    border-radius: 10px;
+    width: 70%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    background-color: #333;
+    padding: 20px;
+  }
+
+  .section-text {
+    width: 400px;
+  }
+
+  .contact-form {
+    max-width: 800px; /* Ancho máximo del formulario en escritorios */
+    margin: 0 auto; /* Centra el formulario en escritorios */
+  }
+}
