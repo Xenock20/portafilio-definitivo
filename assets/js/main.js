@@ -64,3 +64,36 @@ window.addEventListener("resize", function () {
     document.querySelector(".site-header").classList.remove("menu-open");
   }
 });
+
+
+const cont = document.getElementById("proCont")
+
+ArrProject.forEach(element => {
+  const div = document.createElement('div')
+  const img = document.createElement('img')
+  const h3 = document.createElement('h3')
+  const p = document.createElement('p')
+  const a = document.createElement('a')
+
+  div.className = "project"
+  img.className = "project-image"
+  h3.className = "project-title"
+  p.className = "project-description"
+  a.className = "project-link"
+
+  a.setAttribute("target", "_blank");
+  a.setAttribute("href", element.link);
+  img.setAttribute("src", element.urlImg)
+  img.setAttribute("alt", "imagen-proyecto")
+
+  h3.innerText = element.title
+  p.innerText = element.des
+  a.innerText = "Demo o GitHub"
+
+  div.appendChild(img)
+  div.appendChild(h3)
+  div.appendChild(p)
+  div.appendChild(a)
+
+  cont.appendChild(div)
+});
