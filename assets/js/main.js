@@ -65,35 +65,193 @@ window.addEventListener("resize", function () {
   }
 });
 
+const cont = document.getElementById("proCont");
 
-const cont = document.getElementById("proCont")
+ArrProject.forEach((element) => {
+  const div = document.createElement("div");
+  const img = document.createElement("img");
+  const h3 = document.createElement("h3");
+  const p = document.createElement("p");
+  const a = document.createElement("a");
 
-ArrProject.forEach(element => {
-  const div = document.createElement('div')
-  const img = document.createElement('img')
-  const h3 = document.createElement('h3')
-  const p = document.createElement('p')
-  const a = document.createElement('a')
-
-  div.className = "project"
-  img.className = "project-image"
-  h3.className = "project-title"
-  p.className = "project-description"
-  a.className = "project-link"
+  div.className = "project";
+  img.className = "project-image";
+  h3.className = "project-title";
+  p.className = "project-description";
+  a.className = "project-link";
 
   a.setAttribute("target", "_blank");
   a.setAttribute("href", element.link);
-  img.setAttribute("src", element.urlImg)
-  img.setAttribute("alt", "imagen-proyecto")
+  img.setAttribute("src", element.urlImg);
+  img.setAttribute("alt", "imagen-proyecto");
 
-  h3.innerText = element.title
-  p.innerText = element.des
-  a.innerText = "Demo o GitHub"
+  h3.innerText = element.title;
+  p.innerText = element.des;
+  a.innerText = "Demo o GitHub";
 
-  div.appendChild(img)
-  div.appendChild(h3)
-  div.appendChild(p)
-  div.appendChild(a)
+  div.appendChild(img);
+  div.appendChild(h3);
+  div.appendChild(p);
+  div.appendChild(a);
 
-  cont.appendChild(div)
+  cont.appendChild(div);
+});
+
+//Cambiar modo oscuro y claro
+
+const modoBtn = document.getElementById("modo-btn");
+const iconoModo = document.getElementById("icono-modo");
+
+let modoClaro = false;
+
+modoBtn.addEventListener("click", () => {
+  modoClaro = !modoClaro; // Cambiar el estado del modo
+
+  if (modoClaro) {
+    iconoModo.classList.remove("fa-sun");
+    iconoModo.classList.add("fa-moon");
+    modoBtn.classList.add("light-mode-btn");
+
+    document.getElementById("body").classList.add("light-mode-body");
+    document.getElementById("site-header").classList.add("light-mode-header");
+    document.getElementById("inicio-link").classList.add("light-mode-h1");
+    document.getElementById("menu-icon").classList.add("light-mode");
+    document.getElementById("main-nav").classList.add("light-mode-main-nav");
+    document.getElementById("section-title").classList.add("light-mode");
+    document.getElementById("section-subtitle").classList.add("light-mode");
+    document
+      .getElementById("icon-link-1")
+      .classList.add("light-mode-icon-link");
+    document
+      .getElementById("icon-link-2")
+      .classList.add("light-mode-icon-link");
+    document
+      .getElementById("icon-link-3")
+      .classList.add("light-mode-icon-link");
+    document
+      .getElementById("scroll-link")
+      .classList.add("light-mode-scroll-link");
+    document.getElementById("section-title-h2").classList.add("light-mode");
+    document
+      .getElementById("cont-info")
+      .classList.add("light-mode-cont-info-about");
+    document.getElementById("about-text").classList.add("light-mode");
+    document.getElementById("cv-link").classList.add("light-mode-cv-link");
+    document.getElementById("section-title-h2-con").classList.add("light-mode");
+    document.getElementById("lenguajes-title").classList.add("light-mode");
+    document.getElementById("frameworks-title").classList.add("light-mode");
+    document.getElementById("softwares-title").classList.add("light-mode");
+    document.getElementById("section-title-h2-pro").classList.add("light-mode");
+    document.getElementById("footer").classList.add("light-mode-footer");
+
+    const projects = document.getElementById("proCont");
+
+    projects.innerHTML = "";
+
+    ArrProject.forEach((element) => {
+      const div = document.createElement("div");
+      const img = document.createElement("img");
+      const h3 = document.createElement("h3");
+      const p = document.createElement("p");
+      const a = document.createElement("a");
+
+      div.className = "project light-mode-project";
+      img.className = "project-image";
+      h3.className = "project-title light-mode";
+      p.className = "project-description light-mode";
+      a.className = "project-link light-mode-link";
+
+      a.setAttribute("target", "_blank");
+      a.setAttribute("href", element.link);
+      img.setAttribute("src", element.urlImg);
+      img.setAttribute("alt", "imagen-proyecto");
+
+      h3.innerText = element.title;
+      p.innerText = element.des;
+      a.innerText = "Demo o GitHub";
+
+      div.appendChild(img);
+      div.appendChild(h3);
+      div.appendChild(p);
+      div.appendChild(a);
+
+      projects.appendChild(div);
+    });
+  } else {
+    iconoModo.classList.remove("fa-moon");
+    iconoModo.classList.add("fa-sun");
+    modoBtn.classList.remove("light-mode-btn");
+
+    document.getElementById("body").classList.remove("light-mode-body");
+    document
+      .getElementById("site-header")
+      .classList.remove("light-mode-header");
+    document.getElementById("inicio-link").classList.remove("light-mode-h1");
+    document.getElementById("menu-icon").classList.remove("light-mode");
+    document.getElementById("main-nav").classList.remove("light-mode-main-nav");
+    document.getElementById("section-title").classList.remove("light-mode");
+    document.getElementById("section-subtitle").classList.remove("light-mode");
+    document
+      .getElementById("icon-link-1")
+      .classList.remove("light-mode-icon-link");
+    document
+      .getElementById("icon-link-2")
+      .classList.remove("light-mode-icon-link");
+    document
+      .getElementById("icon-link-3")
+      .classList.remove("light-mode-icon-link");
+    document
+      .getElementById("scroll-link")
+      .classList.remove("light-mode-scroll-link");
+    document.getElementById("section-title-h2").classList.remove("light-mode");
+    document
+      .getElementById("cont-info")
+      .classList.remove("light-mode-cont-info-about");
+    document.getElementById("about-text").classList.remove("light-mode");
+    document.getElementById("cv-link").classList.remove("light-mode-cv-link");
+    document
+      .getElementById("section-title-h2-con")
+      .classList.remove("light-mode");
+    document.getElementById("lenguajes-title").classList.remove("light-mode");
+    document.getElementById("frameworks-title").classList.remove("light-mode");
+    document.getElementById("softwares-title").classList.remove("light-mode");
+    document
+      .getElementById("section-title-h2-pro")
+      .classList.remove("light-mode");
+    document.getElementById("footer").classList.remove("light-mode-footer");
+
+    const projects = document.getElementById("proCont");
+
+    projects.innerHTML = "";
+
+    ArrProject.forEach((element) => {
+      const div = document.createElement("div");
+      const img = document.createElement("img");
+      const h3 = document.createElement("h3");
+      const p = document.createElement("p");
+      const a = document.createElement("a");
+
+      div.className = "project";
+      img.className = "project-image";
+      h3.className = "project-title";
+      p.className = "project-description";
+      a.className = "project-link";
+
+      a.setAttribute("target", "_blank");
+      a.setAttribute("href", element.link);
+      img.setAttribute("src", element.urlImg);
+      img.setAttribute("alt", "imagen-proyecto");
+
+      h3.innerText = element.title;
+      p.innerText = element.des;
+      a.innerText = "Demo o GitHub";
+
+      div.appendChild(img);
+      div.appendChild(h3);
+      div.appendChild(p);
+      div.appendChild(a);
+
+      projects.appendChild(div);
+    });
+  }
 });

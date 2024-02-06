@@ -12,6 +12,14 @@ body {
   font-size: 16px;
 }
 
+.light-mode-body {
+  background-color: #fff;
+}
+
+.light-mode {
+  color: #000;
+}
+
 a:link,
 a:visited,
 a:active {
@@ -31,6 +39,14 @@ a:active {
   display: flex;
   justify-content: space-evenly;
   z-index: 1000;
+}
+
+.light-mode-h1 {
+  color: #000;
+}
+
+.light-mode-header {
+  color: #000;
 }
 
 .site-header::before {
@@ -60,6 +76,7 @@ a:active {
   width: 100%;
   background-color: transparent;
   backdrop-filter: blur(25px);
+  background-color: rgba(128, 128, 128, 0.211);
 }
 
 .main-nav a {
@@ -77,6 +94,15 @@ a:active {
   color: #3498db;
 }
 
+.light-mode-main-nav a {
+  color: #000;
+}
+
+.light-mode-main-nav a:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
 .menu-icon {
   font-size: 24px;
   cursor: pointer;
@@ -90,6 +116,11 @@ a:active {
 
 .menu-open .main-nav a {
   background-color: #181818d2;
+}
+
+.menu-open .light-mode-main-nav a {
+  background-color: transparent;
+  backdrop-filter: blur(25px);
 }
 
 /*BODY PAGE*/
@@ -151,6 +182,10 @@ a:active {
   transition: color 0.3s ease, transform 0.3s ease; /* Añade transición al color y tamaño */
 }
 
+.light-mode-icon-link i {
+  color: #000;
+}
+
 .icon-link.linkedin:hover i {
   color: #0077b5; /* Cambia el color del ícono de LinkedIn al hacer hover */
   transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
@@ -180,17 +215,34 @@ a:active {
   transition: background-color 0.3s ease;
 }
 
+.light-mode-scroll-link {
+  border: 2px solid #000;
+}
+
 .scroll-link i {
   color: white; /* Color del ícono por defecto */
   transition: color 0.3s ease;
+}
+
+.light-mode-scroll-link i {
+  color: #000;
 }
 
 .scroll-link:hover {
   background-color: #fff; /* Cambia el fondo al hacer hover */
 }
 
+.light-mode-scroll-link:hover {
+  background-color: #3498db;
+  border: 2px solid #3498db;
+}
+
 .scroll-link:hover i {
   color: #3498db; /* Cambia el color del ícono al hacer hover */
+}
+
+.light-mode-scroll-link:hover i {
+  color: #fff;
 }
 
 /*Seccion sobre mi*/
@@ -200,6 +252,7 @@ a:active {
   height: 20%;
   display: flex;
   flex-direction: column;
+  font-weight: 600;
 }
 
 .profile-image {
@@ -217,10 +270,21 @@ a:active {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.light-mode-cv-link {
+  border: 2px solid #000;
+  color: #000;
+}
+
 .cv-link:hover {
   background-color: #fff; /* Cambia el fondo al hacer hover */
   color: #3498db; /* Cambia el color del texto al hacer hover */
   text-decoration: none; /* Elimina el subrayado al hacer hover */
+}
+
+.light-mode-cv-link:hover {
+  border: 2px solid #3498db;
+  background-color: #3498db;
+  color: #fff;
 }
 
 /*Seccion conocimientos*/
@@ -278,6 +342,11 @@ a:active {
   padding: 20px;
 }
 
+.light-mode-project {
+  background-color: rgba(128, 128, 128, 0.211);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
 .project-image {
   width: 100%;
   max-height: 200px; /* Ajusta según tus preferencias */
@@ -307,6 +376,11 @@ a:active {
 .project-link:hover {
   background-color: #fff;
   color: #3498db;
+}
+
+.light-mode-link:hover {
+  background-color: #3498db;
+  color: #fff;
 }
 
 /*Seccion contacto*/
@@ -378,10 +452,18 @@ a:active {
   padding: 20px; /* Espaciado interior del pie de página */
 }
 
+.light-mode-footer {
+  background-color: rgba(128, 128, 128, 0.211);
+}
+
 /* Estilos para el texto de derechos de autor */
 .site-footer p {
   margin: 0; /* Elimina el margen predeterminado para el párrafo */
   font-size: 14px;
+}
+
+.light-mode-footer p {
+  color: #000;
 }
 
 /* Estilos para pantallas más grandes */
@@ -401,6 +483,7 @@ a:active {
 
   .main-nav a {
     margin: 0 15px;
+    border-radius: 15px;
   }
 
   .home-section,
@@ -417,6 +500,41 @@ a:active {
   }
 }
 
+/* Estilos para el botón */
+.boton-estilizado {
+  background-color: #fff;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.boton-estilizado i {
+  color: #000;
+}
+
+.light-mode-btn {
+  background-color: #000;
+}
+
+.light-mode-btn i {
+  color: #fff;
+}
+
+.boton-estilizado:hover {
+  background-color: #3498db;
+}
+
+.boton-estilizado:hover i {
+  color: #fff;
+}
+
 /* Estilos para pantallas pequeñas (teléfonos) */
 @media only screen and (max-width: 600px) {
   /* Agrega aquí tus estilos para teléfonos */
@@ -428,9 +546,6 @@ a:active {
 }
 
 @media only screen and (min-width: 769px) {
-  .main-nav a {
-    border-radius: 15px;
-  }
 }
 
 /* Estilos para pantallas grandes (escritorios) */
@@ -445,6 +560,11 @@ a:active {
     justify-content: center;
     background-color: #333;
     padding: 20px;
+  }
+
+  .light-mode-cont-info-about {
+    background-color: rgba(128, 128, 128, 0.211);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   }
 
   .section-text {

@@ -5,35 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Federico Saboredo</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>
 
-  <body>
+  <body class="" id="body">
     <!-- Encabezado con Menú de Navegación -->
-    <header class="site-header">
-      <h1><a href="#inicio">Federico</a></h1>
+    <header id="site-header" class="site-header">
+      <h1 id="header-title">
+        <a id="inicio-link" class="" href="#inicio">Federico</a>
+      </h1>
       <!-- Menú de Navegación -->
-      <div class="menu-icon">&#9776;</div>
-      <nav class="main-nav">
-        <a href="#inicio">Inicio</a>
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#conocimientos">Conocimientos</a>
-        <a href="#proyectos">Proyectos</a>
+      <div id="menu-icon" class="menu-icon">&#9776;</div>
+      <nav id="main-nav" class="main-nav">
+        <a id="inicio-nav" href="#inicio">Inicio</a>
+        <a id="sobre-mi-nav" href="#sobre-mi">Sobre mí</a>
+        <a id="conocimientos-nav" href="#conocimientos">Conocimientos</a>
+        <a id="proyectos-nav" href="#proyectos">Proyectos</a>
         <!--<a href="#contactame">Contáctame</a>-->
       </nav>
+
+      <button id="modo-btn" class="boton-estilizado">
+        <i id="icono-modo" class="fas fa-sun"></i>
+      </button>
     </header>
 
     <div class="cont-page">
       <!-- Sección Inicio -->
       <section id="inicio" class="home-section">
-        <h2 class="section-title">Federico Saboredo</h2>
-        <p class="section-subtitle">Full Stack Developer</p>
+        <h2 id="section-title" class="section-title">Federico Saboredo</h2>
+        <p id="section-subtitle" class="section-subtitle">
+          Full Stack Developer
+        </p>
 
         <!-- Social Media Icons -->
         <div class="social-icons">
           <a
             href="https://www.linkedin.com/in/federico-saboredo-a55131248/"
             target="_blank"
+            id="icon-link-1"
             title="LinkedIn"
             class="icon-link linkedin"
             ><i class="fab fa-linkedin"></i
@@ -41,6 +50,7 @@
           <a
             href="https://github.com/Xenock20"
             target="_blank"
+            id="icon-link-2"
             title="GitHub"
             class="icon-link github"
             ><i class="fab fa-github"></i
@@ -48,20 +58,21 @@
           <a
             href="mailto:federicosaboredo04@gmail.com"
             title="Email"
+            id="icon-link-3"
             class="icon-link email"
             ><i class="fas fa-envelope"></i
           ></a>
         </div>
 
-        <a href="#sobre-mi" class="scroll-link"
+        <a href="#sobre-mi" id="scroll-link" class="scroll-link"
           ><i class="fas fa-arrow-down"></i
         ></a>
       </section>
 
       <!-- Sección Sobre mí -->
       <section id="sobre-mi" class="about-section">
-        <h2 class="section-title">Sobre mí</h2>
-        <div class="cont-info-about">
+        <h2 id="section-title-h2" class="section-title">Sobre mí</h2>
+        <div id="cont-info" class="cont-info-about">
           <div class="section-img">
             <img
               src="./assets/img/profile.jpg"
@@ -71,7 +82,7 @@
             />
           </div>
           <div class="section-text">
-            <span class="about-text"
+            <span id="about-text" class="about-text"
               >¡Hola! Soy Federico Saboredo, un Técnico Informático y
               Programador apasionado con sede en Argentina. Desde temprana edad,
               me sumergí en la informática y he cultivado habilidades en
@@ -85,6 +96,7 @@
             <a
               href="https://drive.google.com/file/d/1JCj9btDqzakLW1mIW5vQBdEPxHtARn64/view?usp=sharing"
               target="_blank"
+              id="cv-link"
               class="cv-link"
               >CV</a
             >
@@ -94,10 +106,12 @@
 
       <!-- Sección Conocimientos -->
       <section id="conocimientos" class="skills-section">
-        <h2 class="section-title">Tecnologías / Herramientas</h2>
+        <h2 id="section-title-h2-con" class="section-title">
+          Tecnologías / Herramientas
+        </h2>
 
         <div class="skill-category">
-          <h3>Lenguajes</h3>
+          <h3 id="lenguajes-title" class="">Lenguajes</h3>
           <ul class="skill-list">
             <li>JAVASCRIPT</li>
             <li>JAVA</li>
@@ -110,7 +124,7 @@
         </div>
 
         <div class="skill-category">
-          <h3>Frameworks y Extras</h3>
+          <h3 id="frameworks-title" class="">Frameworks y Extras</h3>
           <ul class="skill-list">
             <li>REACT</li>
             <li>SPRING BOOT</li>
@@ -122,7 +136,7 @@
         </div>
 
         <div class="skill-category">
-          <h3>Softwares y herramientas</h3>
+          <h3 id="softwares-title" class="">Softwares y herramientas</h3>
           <ul class="skill-list">
             <li>BASH</li>
             <li>VS CODE</li>
@@ -136,58 +150,12 @@
 
       <!-- Sección Proyectos -->
       <section id="proyectos" class="projects-section">
-        <h2 class="section-title">Proyectos</h2>
-
+        <h2 id="section-title-h2-pro" class="section-title">Proyectos</h2>
         <div class="project-container" id="proCont"></div>
-
         <!-- Puedes agregar más contenido aquí -->
       </section>
 
-      <!-- Sección Contáctame 
-      <section id="contactame" class="contact-section">
-        <h2 class="section-title">Contáctame</h2>
-
-        <!-- Formulario de contacto
-        <form method="post" class="contact-form">
-          <div class="form-group">
-            <label for="name">Nombre:</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              placeholder="Tu Nombre"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Correo electrónico:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="Tu Correo Electrónico"
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message">Mensaje:</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              required
-              placeholder="Tu Mensaje"
-            ></textarea>
-          </div>
-
-          <button type="submit" class="submit-button">Enviar Mensaje</button>
-        </form>
-      </section>
-    -->
-
-      <footer class="site-footer">
+      <footer id="footer" class="site-footer">
         <p>&copy; 2023 Federico Saboredo. Todos los derechos reservados.</p>
       </footer>
     </div>
