@@ -64,11 +64,17 @@ a:active {
 
 .main-nav a {
   display: block;
-  padding: 15px 0px;
+  font-weight: 600;
+  padding: 10px 5px;
   text-decoration: none;
   color: #fff;
   transition: background-color 0.3s;
   text-align: center;
+}
+
+.main-nav a:hover {
+  background-color: #fff;
+  color: #3498db;
 }
 
 .menu-icon {
@@ -134,32 +140,31 @@ a:active {
 }
 
 .icon-link {
-    margin: 15px;
-    display: inline-block;
-    text-decoration: none;
-  }
-  
-  .icon-link i {
-    font-size: 2rem; /* Ajusta el tamaño de los íconos según sea necesario */
-    color: white; /* Color del ícono por defecto */
-    transition: color 0.3s ease, transform 0.3s ease; /* Añade transición al color y tamaño */
-  }
-  
-  .icon-link.linkedin:hover i {
-    color: #0077b5; /* Cambia el color del ícono de LinkedIn al hacer hover */
-    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
-  }
-  
-  .icon-link.github:hover i {
-    color: #e000ec; /* Cambia el color del ícono de GitHub al hacer hover */
-    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
-  }
-  
-  .icon-link.email:hover i {
-    color: #ea4335; /* Cambia el color del ícono de Email al hacer hover */
-    transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
-  }
-  
+  margin: 15px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.icon-link i {
+  font-size: 2rem; /* Ajusta el tamaño de los íconos según sea necesario */
+  color: white; /* Color del ícono por defecto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Añade transición al color y tamaño */
+}
+
+.icon-link.linkedin:hover i {
+  color: #0077b5; /* Cambia el color del ícono de LinkedIn al hacer hover */
+  transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+}
+
+.icon-link.github:hover i {
+  color: #e000ec; /* Cambia el color del ícono de GitHub al hacer hover */
+  transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+}
+
+.icon-link.email:hover i {
+  color: #ea4335; /* Cambia el color del ícono de Email al hacer hover */
+  transform: scale(1.2); /* Aumenta el tamaño al hacer hover */
+}
 
 .scroll-link {
   font-size: 2rem;
@@ -247,8 +252,8 @@ a:active {
   transition: all 0.5s;
 }
 
-.skill-list li:hover{
-    transform: scale(1.1);
+.skill-list li:hover {
+  transform: scale(1.1);
 }
 
 /* Sección proyectos */
@@ -301,7 +306,7 @@ a:active {
 
 .project-link:hover {
   background-color: #fff;
-  color: #3498db
+  color: #3498db;
 }
 
 /*Seccion contacto*/
@@ -422,8 +427,14 @@ a:active {
   /* Agrega aquí tus estilos para tabletas */
 }
 
+@media only screen and (min-width: 769px) {
+  .main-nav a {
+    border-radius: 15px;
+  }
+}
+
 /* Estilos para pantallas grandes (escritorios) */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
   /* Agrega aquí tus estilos para escritorios */
 
   .cont-info-about {
