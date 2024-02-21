@@ -157,12 +157,14 @@ a:active {
 
 .section-title {
   height: 15%;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
 }
 
 .section-subtitle {
+  color: #3eaae3;
   height: 15%;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: -16px;
 }
 
 .social-icons {
@@ -546,11 +548,27 @@ a:active {
 }
 
 @media only screen and (min-width: 769px) {
+  .section-subtitle {
+    font-size: 3.5rem;
+    margin-left: -50px;
+  }
+
+  .section-title.h2 {
+    font-size: 3.5rem;
+    margin-left: 100px;
+  }
 }
 
 /* Estilos para pantallas grandes (escritorios) */
 @media only screen and (min-width: 1024px) {
   /* Agrega aquí tus estilos para escritorios */
+  .section-subtitle {
+    font-size: 4.5rem;
+  }
+
+  .section-title.h2 {
+    font-size: 4.5rem;
+  }
 
   .cont-info-about {
     border-radius: 10px;
